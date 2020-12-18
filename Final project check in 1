@@ -105,6 +105,15 @@ class Ship:
             elif attack.collision(objects):
                 objects.health -= 10
                 self.attacks.remove(attack)
+     #def bar_health(health_user, health_enemy):
+        if health_user>30:
+            health_user_color=red
+        
+        if health_enemy>30:
+            health_enemy_color=red
+        
+        pygame.draw.rect(gameDisplay, health_user_color,(700,30, health_user, 30))
+        pygame.draw.rect(gameDisplay, enemy_user_color,(25,30, health_enemy, 30))
 
 #class Enemy(Ship):
     """This is the enemy class that will take the attributes from the ship Class.  
