@@ -168,9 +168,9 @@ class Player(Ship):
         super().draw(window)
         self.healthbar(window)
 
-    def healthbar(self, window): #Getahun is supposed to work on this
-        pygame.draw.rect(window, (255,0,0), (self.x, self.y + self.ship_img.get_height() + 10, self.ship_img.get_width(), 10))
-        pygame.draw.rect(window, (0,255,0), (self.x, self.y + self.ship_img.get_height() + 10, self.ship_img.get_width() * (self.health/self.max_health), 10))
+    def healthbar(self, window): 
+        pygame.draw.rect(window, (255,0,0), (self.x, self.y + self.ship_img.get_height() + 20, self.ship_img.get_width(), 20))
+        pygame.draw.rect(window, (0,255,0), (self.x, self.y + self.ship_img.get_height() + 20, self.ship_img.get_width() * (self.health/self.max_health), 20))
     #This meathod was created by Rohan
     def scoreboard(self, game_score): 
         """This creates a scoreboard that logs the top 10 point scorers and 
